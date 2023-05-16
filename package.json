@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "express": "^4.18.2",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.22"
+  },
+  "name": "sever",
+  "version": "1.0.0",
+  "description": "sever prac",
+  "main": "main.js",
+  "scripts": {
+    "test": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wihyanghoon/Node.js.git"
+  },
+  "author": "wi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wihyanghoon/Node.js/issues"
+  },
+  "homepage": "https://github.com/wihyanghoon/Node.js#readme"
+}

@@ -1,27 +1,19 @@
-const http = require('http');
-const fs = require('fs').promises
+const express = require("express");
+const morgan = require("morgan");
 
-const server = http.createServer(async(req, res)=>{
-  if(req.url === '/'){
-    if(req.method === "GET") {
-      const data = await fs.readFile('./mainhtml')
-      res.end(data)
-    }
-  }
-  if(req.url === '/'){
-    if(req.method === "GET") {
-      const data = await fs.readFile('./mainhtml')
-      res.end(data)
-    }
-  }
-  
-}).listen(8080)
+const app = express();
+const loggar = morgan("dev");
 
+app.use(loggar);
+app.set('port', process.env.PORT || 8080)
+app.get("/", (req, res) => {
+  res.send("hello world");
+});
 
-server.on('listening', ()=>{
-  console.log('서버가 연결되었습니다')
+app.get("/post", (req ,res) => {
+  res.send('post')
 })
 
-server.on('error', (error)=>{
-  console.error(error)
-})
+app.listen(app.get('port'), () => {
+  console.log("서버실행중");
+});
