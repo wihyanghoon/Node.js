@@ -13,7 +13,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/post", (req ,res) => {
-  res.send('post')
+  res.send('post do it')
 })
 
 app.get("/catagory/:name", (req, res) => {
