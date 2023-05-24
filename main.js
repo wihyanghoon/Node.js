@@ -5,7 +5,5 @@ http.createServer(async(req, res)=>{
 
   res.end()
 }).listen(8080, () => {
-  console.log('fdfd')
+  console.log('port 연결됨')
 })
-
-for
